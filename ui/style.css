@@ -1,0 +1,103 @@
+body {
+    font-family: monospace;
+    background-color: #212121;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.row {
+    display: flex;
+}
+
+.row.legend{
+    align-items: center;
+    justify-content: center;
+}
+
+
+.container {
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 6px;
+    text-align: center;
+}
+
+.container label {
+    line-height: 34px;
+}
+
+.seat {
+    background-color: #4a8678;
+    height: 24px;
+    width: 24px;
+    margin: 5px 3px;
+    border-radius: 50px;
+}
+
+.seat.selected {
+    background-color: #f9a825;
+}
+
+/*.seat:nth-of-type(2) {*/
+/*    margin-right: 18px;*/
+/*}*/
+
+.seat.occupied {
+    background-color: #2e2e2e;
+}
+
+.seat.best {
+    background-color: #ffba7ed6;
+}
+
+/*.seat:nth-of-type(5n) {*/
+/*    margin-right: 18px;*/
+/*}*/
+
+/*.seat:nth-last-of-type(2) {*/
+/*    margin-left: 18px;*/
+/*}*/
+
+/*.seat:last-child {*/
+/*    margin-right: 0px;*/
+/*}*/
+
+.seat:not(.occupied):hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.request {
+    border: 1px solid #3e3e3e;
+    border-radius: 4px;
+
+}
+
+.request span {
+    display: inline-block;
+    margin: 0 8px;
+}
+
+span.counter {
+    font-family: monospace;
+    font-size: 24px;
+}
+
+span.control {
+    width: 20px;
+    height: 20px;
+    background-color: #2e2e2e;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+span.control:hover {
+    background-color: #cecec6;
+    transform: scale(1.2);
+    color: black;
+}
