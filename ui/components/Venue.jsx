@@ -4,14 +4,15 @@ import Row from './Row';
 
 class Venue extends Component {
   render() {
+    const {rows, columns} = this.props;
+
     return (
       <div className="container">
         {
-          [...Array(this.props.info?.layout.rows)].map((e, i) => {
+          [...Array(rows)].map((e, i) => {
             return <Row key={i}
-              availability={this.props.availability}
               row={String.fromCharCode(97 + i)}
-              columns={this.props.info?.layout.columns}>{i}</Row>;
+              columns={columns}>{i}</Row>;
           })
         }
       </div>

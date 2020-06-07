@@ -1,8 +1,8 @@
 import React, {Component} from "react";
 import {connect} from 'react-redux'
 import Venue from '../Venue';
-import {fetchBooking} from '../../actions/index'
 import Request from "./Request";
+import {fetchBooking} from '../../actions/bookings.action';
 
 class Booking extends Component {
     constructor(props) {
@@ -20,11 +20,11 @@ class Booking extends Component {
 
 
     render() {
-        const {seats, venue, best} = this.props;
+        const {seats, rows, columns, best} = this.props;
 
         return (
             <>
-                <Venue availability={seats} info={venue} best={best}/>
+                <Venue seats={seats} rows={rows} columns={columns}/>
                 <Request/>
             </>
         )
@@ -32,11 +32,12 @@ class Booking extends Component {
 
 }
 
-export const mapStateToProps = ({bookings}) => {
+export const mapStateToProps = (state) => {
+    const bookings = state.bookings;
+
     return {
-        venue: bookings?.data.venue,
-        seats: bookings?.data.seats,
-        best: bookings?.data.best
+        rows: bookings.layout.rows,
+        columns: bookings.layout.columns
     }
 };
 

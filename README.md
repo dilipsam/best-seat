@@ -11,12 +11,14 @@ $ npm install
 $ bundle install
 ```
 ```
-# starts the rails application and then run the UI application.
+# start the rails application and then run the UI application.
+$ rails s
 $ npm start
 ``` 
-
+NOTE: the client application expects the UI application to run at localhost:3000
 
 To run tests (Jest)
+Scenarios are available in [test suite](ui/selectors/seat.selector.spec.js)
 
 ```
 $ npm test
@@ -28,8 +30,6 @@ To run lint (ESLint)
 $npm run lint
 ``` 
 
-NOTE: the client application expects the UI application to run at localhost:3000
-
 To change venue information edit [this file.](public/venues/1.json)
 
 ruby version : 2.6.3
@@ -40,5 +40,3 @@ TODO
 * Enforce Prop Types
 * Improve Code Coverage
 * Improve JS Doc
-* Fix Linting Errors
-

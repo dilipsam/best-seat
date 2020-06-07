@@ -3,12 +3,12 @@ import Seat from './containers/Seat';
 
 class Row extends Component {
   render() {
-    const {row} = this.props;
+    const {row, columns} = this.props;
 
     return (
       <div className='row'>
         {
-          [...Array(this.props.columns)].map((e, i) => {
+          [...Array(columns)].map((e, i) => {
             return <Seat id={row + (i + 1)} key={i}/>;
           })
         }

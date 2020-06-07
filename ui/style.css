@@ -1,7 +1,7 @@
 body {
     font-family: monospace;
     background-color: #212121;
-    color: #ffffff;
+    color: #bfbfbf;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,7 +14,7 @@ body {
     display: flex;
 }
 
-.row.legend{
+.row.legend {
     align-items: center;
     justify-content: center;
 }
@@ -43,29 +43,17 @@ body {
     background-color: #f9a825;
 }
 
-/*.seat:nth-of-type(2) {*/
-/*    margin-right: 18px;*/
-/*}*/
-
 .seat.occupied {
-    background-color: #2e2e2e;
+    background-color: #505050;
 }
 
 .seat.best {
     background-color: #ffba7ed6;
 }
 
-/*.seat:nth-of-type(5n) {*/
-/*    margin-right: 18px;*/
-/*}*/
-
-/*.seat:nth-last-of-type(2) {*/
-/*    margin-left: 18px;*/
-/*}*/
-
-/*.seat:last-child {*/
-/*    margin-right: 0px;*/
-/*}*/
+.seat:last-child {
+    margin-right: 0px;
+}
 
 .seat:not(.occupied):hover {
     cursor: pointer;
@@ -83,9 +71,15 @@ body {
     margin: 0 8px;
 }
 
+.legend .seat {
+    height: 12px;
+    width: 12px;
+}
+
 span.counter {
     font-family: monospace;
     font-size: 24px;
+    color: #FFF
 }
 
 span.control {

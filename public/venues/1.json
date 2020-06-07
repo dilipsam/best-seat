@@ -156,7 +156,103 @@
       "column": 14,
       "status": "AVAILABLE"
     },
-    "h7": {
+    "c1": {
+      "id": "c1",
+      "row": "c",
+      "column": 1,
+      "status": "AVAILABLE"
+    },
+    "c2": {
+      "id": "c2",
+      "row": "c",
+      "column": 2,
+      "status": "AVAILABLE"
+    },
+    "c3": {
+      "id": "c3",
+      "row": "c",
+      "column": 3,
+      "status": "AVAILABLE"
+    },
+    "c4": {
+      "id": "c4",
+      "row": "c",
+      "column": 4,
+      "status": "AVAILABLE"
+    },
+    "c5": {
+      "id": "c5",
+      "row": "c",
+      "column": 5,
+      "status": "AVAILABLE"
+    },
+    "c6": {
+      "id": "c5",
+      "row": "c",
+      "column": 6,
+      "status": "AVAILABLE"
+    },
+    "c7": {
+      "id": "c7",
+      "row": "c",
+      "column": 7,
+      "status": "AVAILABLE"
+    },
+    "c8": {
+      "id": "c8",
+      "row": "c",
+      "column": 8,
+      "status": "AVAILABLE"
+    },
+    "c9": {
+      "id": "c9",
+      "row": "c",
+      "column": 9,
+      "status": "AVAILABLE"
+    },
+    "c10": {
+      "id": "c10",
+      "row": "c",
+      "column": 10,
+      "status": "AVAILABLE"
+    },
+    "c11": {
+      "id": "c11",
+      "row": "c",
+      "column": 11,
+      "status": "AVAILABLE"
+    },
+    "c12": {
+      "id": "c12",
+      "row": "c",
+      "column": 12,
+      "status": "AVAILABLE"
+    },
+    "c13": {
+      "id": "c13",
+      "row": "c",
+      "column": 13,
+      "status": "AVAILABLE"
+    },
+    "c14": {
+      "id": "c14",
+      "row": "c",
+      "column": 14,
+      "status": "AVAILABLE"
+    },
+    "d7": {
+      "id": "d7",
+      "row": "d",
+      "column": 7,
+      "status": "AVAILABLE"
+    },
+    "d8": {
+      "id": "d8",
+      "row": "d",
+      "column": 8,
+      "status": "AVAILABLE"
+    },
+    "f7": {
       "id": "h7",
       "row": "h",
       "column": 7,

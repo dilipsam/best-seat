@@ -1,5 +1,7 @@
 import React, {Component} from "react";
 import {connect} from 'react-redux'
+import {clone as _clone} from 'lodash';
+import {getBestSeats} from "../../selectors/seat.selector";
 
 class Seat extends Component {
     constructor(props) {
@@ -25,11 +27,14 @@ class Seat extends Component {
 
 }
 
-export default connect(({bookings}, {id}) => {
-    let seat = JSON.parse(JSON.stringify(bookings?.data?.seats?.[id] || {}));
+export default connect((state, {id}) => {
+    const {bookings = {}} = state;
+    const best = getBestSeats(state);
 
-    if (bookings?.best && bookings?.best.length) {
-        seat.isPreferred = bookings.best.includes(seat.id);
+    let seat = _clone(bookings?.seats[id] || {});
+
+    if (best && best.length) {
+        seat.isPreferred = best.includes(seat.id);
     }
 
     return seat;

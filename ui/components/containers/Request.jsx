@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import {connect} from 'react-redux'
-import {changeDemand} from "../../actions";
+import {changeDemand} from "../../actions/bookings.action";
 
 
 class Request extends Component {
@@ -14,7 +14,7 @@ class Request extends Component {
         const {dispatch} = this.props;
 
         // Ensure count doesn't go below 1
-        if(offset === -1 && this.props.demand === 1) return;
+        if (offset === -1 && this.props.demand === 1) return;
         dispatch(changeDemand(this.props.demand + offset));
     }
 

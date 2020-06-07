@@ -1,29 +1,26 @@
-import {CHANGE_DEMAND, FETCH_BOOKING, FETCH_BOOKING_SUCCESS} from '../actions';
-import {computeBest} from '../services/bookings.service';
+import {CHANGE_DEMAND, FETCH_BOOKING_SUCCESS} from '../actions/bookings.action';
 
 function bookings(state = {
   demand: 1,
-  data: {},
-  best: [],
-}, action) {
-  switch (action.type) {
+  layout: {
+    rows: 0,
+    columns: 0,
+  },
+  seats: {},
+}, {type, value}) {
+  switch (type) {
     case FETCH_BOOKING_SUCCESS:
-      return Object.assign({}, state, {
+      return {
+        ...state,
         isFetching: false,
-        data: action.json,
-        best: computeBest(
-            action.json.seats,
-            action.json.venue.layout,
-            state.demand),
-      });
+        layout: value.venue.layout,
+        seats: value.seats,
+      };
     case CHANGE_DEMAND:
-      return Object.assign({}, state, {
-        demand: action.value,
-        best: [].concat(computeBest(
-            state.data.seats,
-            state.data.venue.layout,
-            action.value)),
-      });
+      return {
+        ...state,
+        demand: value,
+      };
     default:
       return state;
   }
