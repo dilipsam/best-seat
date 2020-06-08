@@ -10,9 +10,9 @@ The UI is implemented as a SPA using React, Redux.
 To find the optimal seat, each seat is provided a positive integer weight. The seats at the extremes of a row have 1 as 
 their weight, increasing in steps of 1 towards the center of the row.
 
-The best seats are the ones having the highest cumulative weight. This method is implemented a pure function in [this](ui/selectors/seat.selector.js)  
+The best seats are the ones having the highest cumulative weight. This method is implemented a pure function in [this selector.](ui/selectors/seat.selector.js)  
 
-Jest runner is used for the test scenarios [test suite](ui/selectors/seat.selector.spec.js)  
+Jest runner is used for the test scenarios [ in this test suite.](ui/selectors/seat.selector.spec.js)  
 
 
 ## Run
