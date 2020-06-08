@@ -28,7 +28,7 @@ $ bundle install
 $ rails s
 $ npm start
 ``` 
-NOTE: the client application expects the UI application to run at localhost:3000
+NOTE: the client UI application expects the Rails API application to run at localhost:3000
 
 ## Test
 
